@@ -13,7 +13,7 @@ class Settings(BaseSettings):
 
     # Application
     app_name: str = "Throttle: Rate Limiter API"
-    app_version: str = "1.0.4"
+    app_version: str = "1.0.5"
     debug: bool = False
 
     # Redis Configuration
@@ -23,6 +23,7 @@ class Settings(BaseSettings):
     redis_db: int = 0
     redis_ssl: bool = False
     redis_url: Optional[str] = None  # If provided, overrides individual settings
+    redis_token: Optional[str] = None  # For services like Upstash
 
     # Connection Pool
     redis_max_connections: int = 50
