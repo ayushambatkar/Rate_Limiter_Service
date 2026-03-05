@@ -47,7 +47,6 @@ class RedisClient:
         try:
             self._pool = ConnectionPool.from_url(
                 settings.redis_connection_url,
-                password=settings.redis_token,
                 max_connections=settings.redis_max_connections,
                 socket_timeout=settings.redis_socket_timeout,
                 socket_connect_timeout=settings.redis_socket_connect_timeout,
